@@ -1,0 +1,158 @@
+.navigation
+
+    padding: 20px 30px
+
+    z-index: 100
+    background-color: $blue
+
+    > div
+        display: flex
+        justify-content: space-between
+        position: relative
+
+        margin: 0 auto
+        max-width: $bp-large
+        width: 100%
+
+        @media screen and (min-width: $bp-medium)
+            justify-content: space-between
+
+        > label
+            display: block
+            position: relative
+
+            color: $white
+            font-size: 2.5em
+            text-align: center
+
+            cursor: pointer
+
+            z-index: 100
+
+            @media screen and (min-width: $bp-medium)
+                display: none
+    .logo
+        h1
+            background-image: url('/../../images/ll_logo_blanc.png')
+            background-position: center
+            background-repeat: no-repeat
+            background-size: contain
+
+            height: 50px
+            margin: 0
+            width: 110px
+
+            font-size: 0 
+
+    input
+        position: absolute
+
+        opacity: 0
+
+        @media screen and (min-width: $bp-medium)
+            display: none
+
+    input:checked ~ div
+        transform: translateX(0)
+
+    input:checked ~ #burger
+        display: none
+
+    > div > div
+        display: flex
+        position: absolute
+
+        align-items: center
+
+        background-color: $blue
+        height: 100vh
+        width: 100vw
+
+        transition: all .5s
+        transform: translateX(-200vw)
+
+        top: -20px
+        left: -30px
+        z-index: 200
+
+        @media screen and (min-width: $bp-medium)
+            position: relative
+
+            background-color: transparent
+            height: auto
+            width: auto
+
+            transform: translate(0, 0)
+
+            top: 0
+            left: 0
+
+    &__list
+        display: flex
+
+        align-items: center
+        flex-direction: column
+
+        height: max-content
+        margin: 0 auto
+
+        @media screen and (min-width: $bp-medium)
+            flex-direction: row
+            justify-content: space-between
+        
+        label
+            display: block
+            position: absolute
+
+            width: max-content
+
+            color: $white
+            font-size: 2.6em
+            text-align: center
+
+            cursor: pointer
+
+            top: 20px
+            right: 30px
+
+            @media screen and (min-width: $bp-medium)
+                display: none
+
+        &_item
+            display: block
+
+            margin: 5px 0
+
+            @media screen and (min-width: $bp-medium)
+                display: flex
+
+                align-items: center
+
+                margin: 0
+                padding-left: 30px
+
+            &-link
+                padding: 5px 0
+
+                color: $white
+                font-size: 2em
+                text-align: center
+                text-transform: uppercase
+
+                transition: all .5s
+
+                @media screen and (min-width: $bp-medium)
+                    margin: 0
+                    opacity: .8
+                    padding: 0
+
+                    font-size: 1em
+
+                &:active,
+                &:focus,
+                &:hover
+                    opacity: 1
+
+                    transition: all .5s
+            
+            

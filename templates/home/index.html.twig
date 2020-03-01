@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+    <section class="header">
+        <div class="container">
+            <div class="header__titles">
+                <h2>Développeuse Web Junior</h1>
+                <h3>Rennes</h2>
+            </div>
+
+            <div class="header__image">
+                <a href="https://www.facebook.com/laureanne.leneel" target="_blank" title="Facebook" style="position: absolute; left: 7.14%; top: 54.16%; width: 6.12%; height: 11.5%; z-index: 2;"></a><a href="https://www.linkedin.com/in/laure-anne-le-n%C3%A9el-252037135/" target="_blank" title="Linkedin" style="position: absolute; left: 19.76%; top: 54.07%; width: 6.08%; height: 11.55%; z-index: 2;"></a><a href="https://www.linkedin.com/in/laure-anne-le-n%C3%A9el-252037135/" title="Mail" style="position: absolute; left: 33.18%; top: 54.16%; width: 6.1%; height: 11.59%; z-index: 2;"></a>
+                <img usemap="#links" src="{{ absolute_url(path('home')) }}/images/header_image.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="current">
+
+        <div class="header__current">
+            <div class="container">
+                <div class="title">
+                    <div class="circle"></div>
+                    <div>
+                        <h4>Actuellement</h4>
+                        <p>En poste à Check&Visit en tant que développeuse web</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="skills"> 
+        <div class="line"></div>
+        <div class="container">
+            <div class="title">
+                <div class="circle"></div>
+                <h4>Mes compétences</h4>
+            </div>
+
+            <div class="skills__list">
+                {% for skill in skills %}
+                    <article>
+                        <i class="{{ skill.icon }}"></i>
+                        <p>{{ skill.name }}</p>
+                    </article>
+                {% endfor %}
+            </div>
+
+            <a class="cta" href="">Découvrir mon CV</a>
+        </div>
+    </section>
+
+    <section class="last">
+        <div class="container">
+            <div class="title">
+                <div class="circle"></div>
+                <h4>Mes derniers projets</h4>
+            </div>
+
+            <div class="last__list">
+                <article class="last__list_project">
+                    <div class="last__list_project-category"><i class="fas fa-code"></i></div>
+                    <div class="last__list_project-image"><img src="{{ absolute_url(path('home')) }}/images/mockup_epa_dev.jpg" alt=""></div>
+                    <div class="last__list_project-text">
+                        <h5>Entreprendre pour apprendre</h5>
+                        <p>Mars 2019</p>
+                    </div>
+                </article>
+
+                <article class="last__list_project">
+                    <div class="last__list_project-category"><i class="fas fa-code"></i></div>
+                    <div class="last__list_project-image"><img src="{{ absolute_url(path('home')) }}/images/mockup_epa_dev.jpg" alt=""></div>
+                    <div class="last__list_project-text">
+                        <h5>Entreprendre pour apprendre</h5>
+                        <p>Mars 2019</p>
+                    </div>
+                </article>
+
+                <article class="last__list_project">
+                    <div class="last__list_project-category"><i class="fas fa-code"></i></div>
+                    <div class="last__list_project-image"><img src="{{ absolute_url(path('home')) }}/images/mockup_epa_dev.jpg" alt=""></div>
+                    <div class="last__list_project-text">
+                        <h5>Entreprendre pour apprendre</h5>
+                        <p>Mars 2019</p>
+                    </div>
+                </article>
+            </div>
+
+            <a class="cta" href="">Voir mon portfolio</a>
+
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="title">
+                <div class="circle"></div>
+                <h4>N'hésitez pas à me contacter</h4>
+            </div>
+
+            <div class="contact__text">
+                <h5>N'hésitez pas, cela prend seulement quelques minutes.</h5>
+            </div>
+
+            <a class="cta" href="">Me contacter</a>
+
+            <div class="contact__image"><img src="{{ absolute_url(path('home')) }}/images/image_contact.png" alt=""></div>
+        </div>
+    </section>
+
+{% endblock %}
