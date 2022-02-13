@@ -27,7 +27,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ajv": "^6.5.3",
+    "ajv": "^6.12.3",
     "jquery": "^3.3.1",
     "jquery.waitforimages": "^2.4.0",
     "owl.carousel": "^2.3.4",
